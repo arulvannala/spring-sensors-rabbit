@@ -23,6 +23,9 @@ public class SensorsDataSink {
         return sensorData -> {
             log.info("Received sensor data: {}", sensorData);
             sensorRepository.save(sensorData);
+            // log.info("ID: {}",sensorData);
+            // log.info("temperature: {}", sensorData);
+            // log.info("pressure: {}", sensorData);
         };
     }
 
