@@ -16,7 +16,7 @@ spec:
   params:
   - name: annotations
     value:
-      autoscaling.knative.dev/minScale: "2"
+      autoscaling.knative.dev/minScale: "4"
   serviceClaims:
     - name: rmq
       ref:

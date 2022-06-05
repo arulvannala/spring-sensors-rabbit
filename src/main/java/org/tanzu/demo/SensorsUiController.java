@@ -1,6 +1,9 @@
 package org.tanzu.demo;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.actuate.trace.http.HttpTraceRepository;
+import org.springframework.boot.actuate.trace.http.InMemoryHttpTraceRepository;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,5 +26,10 @@ public class SensorsUiController {
         model.addAttribute("title", title);
         return "index";
     }
+
+    @Bean
+    public HttpTraceRepository htttpTraceRepository() {
+        return new InMemoryHttpTraceRepository();
+    };
 }
 
