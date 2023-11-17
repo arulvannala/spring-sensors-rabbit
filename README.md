@@ -85,4 +85,4 @@ You can scale up the number of sensors displayed in the demo app by using:
 ```
 kubectl scale deployment/spring-sensors-publisher --replicas=5
 ```
-demo
+demo1
